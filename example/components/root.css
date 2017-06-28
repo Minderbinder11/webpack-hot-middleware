@@ -1,4 +1,6 @@
 .beach {
     background-color: green;
     width: 100px;
+    height: 200px;
+    border-radius: 5px;
     }

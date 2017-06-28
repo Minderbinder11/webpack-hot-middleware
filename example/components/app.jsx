@@ -12,7 +12,7 @@ const render = Component => {
   )
 }
 
-render(Root)
+render(Root);
 
 if (module.hot) {
   module.hot.accept('./root.jsx', () => { render(Root) })
