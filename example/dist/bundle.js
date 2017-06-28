@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "4c5cbe1729ee659a513f"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "236d9b0179f063064b4a"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -769,17 +769,22 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 var Root = function Root() {
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    'div',
+    "div",
     null,
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      'div',
-      null,
-      'Hello React Hot Loader!'
+      "div",
+      { className: "beach" },
+      "Hello React Hot Loader!"
     ),
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      'h2',
+      "h2",
       null,
-      'Adding some more code here'
+      "Adding some more code here"
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      "h6",
+      null,
+      "and here !!"
     )
   );
 };
@@ -793,9 +798,9 @@ var _temp = function () {
     return;
   }
 
-  __REACT_HOT_LOADER__.register(Root, 'Root', '/Users/Phil/HackReactor/okta/webpack-hot-middleware/example/components/root.jsx');
+  __REACT_HOT_LOADER__.register(Root, "Root", "/Users/Phil/HackReactor/okta/webpack-hot-middleware/example/components/root.jsx");
 
-  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/Phil/HackReactor/okta/webpack-hot-middleware/example/components/root.jsx');
+  __REACT_HOT_LOADER__.register(_default, "default", "/Users/Phil/HackReactor/okta/webpack-hot-middleware/example/components/root.jsx");
 }();
 
 ;
