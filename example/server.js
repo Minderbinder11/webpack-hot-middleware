@@ -1,10 +1,11 @@
 var http = require('http');
+var path = require('path');
 
 var express = require('express');
 
 var app = express();
 
-app.use(require('morgan')('short'));
+//app.use(require('morgan')('short'));
 
 // ************************************
 // This is the real meat of the example
@@ -29,12 +30,12 @@ app.use(require('morgan')('short'));
 
 // Do anything you like with the rest of your express application.
 
-app.get("/", function(req, res) {
-  res.sendFile(__dirname + '/index.html');
+//app.use(express.static(path.join(__dirname, 'example')));
+app.get('/', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'index.html'));
 });
-app.get("/multientry", function(req, res) {
-  res.sendFile(__dirname + '/index-multientry.html');
-});
+
+//console.log('require main: ', require.main);
 
 if (require.main === module) {
   var server = http.createServer(app);

@@ -1,24 +1,35 @@
-var webpack = require('webpack');
+const webpack = require('webpack');
+const path = require('path');
 
 module.exports = {
-  context: __dirname,
-  entry: [
-    // Add the client which connects to our middleware
-    // You can use full urls like 'webpack-hot-middleware/client?path=http://localhost:3000/__webpack_hmr'
-    // useful if you run your app from another point like django
-    'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
-    // And then the actual application
-    './client.js'
-  ],
+  devtool: 'source-map',
+  entry: {
+    'app': [
+      'babel-polyfill',
+      'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
+      'react-hot-loader/patch',
+      // And then the actual application
+      './components/app.jsx'
+    ]
+  },
   output: {
     path: __dirname,
-    publicPath: '/',
-    filename: 'bundle.js'
+    filename: './dist/bundle.js'
   },
-  devtool: '#source-map',
   plugins: [
-    new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+    new webpack.NamedModulesPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
   ],
+  module: {
+    rules: [
+      {
+        test: /\.jsx?$/,
+        use: [
+          'babel-loader',
+        ],
+        exclude: /node_modules/,
+      },
+    ],
+  },
 };
