@@ -18,7 +18,7 @@
     "webpack-hot-middleware": "./../"
   },
   "scripts": {
-    "webpack": "webpack --config webpack.config.js --progress --colors --watch",
+    "webpack": "webpack --config webpack.config.js --progress --colors",
     "start": "WEBPACK_CONFIG=./webpack.config.js node server.js",
     "start:multientry": "WEBPACK_CONFIG=./webpack.config.multientry.js node server.js"
   },
@@ -31,8 +31,10 @@
     "babel-preset-stage-2": "^6.24.1",
     "copyfiles": "^1.2.0",
     "cross-env": "^5.0.1",
+    "css-loader": "^0.28.4",
     "react-hot-loader": "^3.0.0-beta.6",
     "rimraf": "^2.6.1",
+    "style-loader": "^0.18.2",
     "webpack": "^2.6.1"
   }
 }
